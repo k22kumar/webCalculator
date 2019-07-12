@@ -24,26 +24,29 @@ var previousValue;
 var evaluate = [];
 var rawNumber;
 
-function formatNumber (num){
+function formatNumber(num){
 	var n = Number(num);
+	console.log(n);
 	var value = n.toLocaleString("en");
 	return value;
 }
 
-function removeFormatting (num){
-	return Number(num.toString().replace(/,/g,''));
+function removeFormatting(num){
+	console.log("removeformatting: "+ num);
+	return Number(num.replace(/,/g,''));
 }
 
 function getOutput(){
-	return document.getElementById("output");
+	return display.innerText;
 }
 
 function updateDisplay (num) {
-	var formattedNumber = getOutput() + num.innerText;
-	formattedNumber = formatNumber(formattedNumber);
+	formattedNumber = formatNumber(num);
 	display.innerText = formattedNumber;
 	return formattedNumber;
 }
+
+display.innerText = 0;
 
 for (let i =0; i < numbers.length; i++){
 	numbers[i].addEventListener("click",function(){
@@ -56,5 +59,12 @@ for (let i =0; i < numbers.length; i++){
 }
 
 for (let i =0; i < operator.length; i++){
-	operator[i].addEventListener("click",doOperation,false);
+	operator[i].addEventListener("click",function(){
+		console.log(this.id);
+		if (this.id=="clear") {
+			display.innerText = "0";
+		}
+
+
+	});
 }
