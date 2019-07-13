@@ -31,9 +31,14 @@ div {
 	transition: all 0.72s;
 }
 
-.btn:hover{background-color: yellow;}
+.btn:hover{background-color: orange}
 
-.btn:active{background-color: black;}
+#add:hover{background-color: red}
+#sub:hover{background-color: blue}
+#mult:hover{background-color: yellow}
+#divi:hover{background-color: green}
+
+.btn:active{background-color: black}
 
 .btn:focus {outline: 0;}
 

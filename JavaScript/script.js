@@ -19,9 +19,8 @@ var numbers = document.getElementsByClassName("number");
 var operator = document.getElementsByClassName("operator");
 
 
-var displayValue = "0";
+var displayValue = "0"; //default value is 0 on startup
 var currentValue;
-var previousValue;
 var calculation;
 var rawNumber;
 
@@ -73,8 +72,6 @@ for (var i =0; i < operator.length; i++){
 	operator[i].addEventListener("click",function(){
 		if (this.id=="clear") {
 			display.innerText = "0";
-			console.log(history);
-			console.log(history.innerText);
 			history.innerText = "";
 		}
 		if (this.id=="back") {
@@ -90,27 +87,22 @@ for (var i =0; i < operator.length; i++){
 			console.log(currentValue);
 			if(currentValue){//if currentValue != null
 				calculation = currentValue + "-";
-				console.log("sub :"+calculation);
 				printHistory(calculation);
 				updateDisplay("");
 			}
 		}
 		if (this.id=="mult") {
 			currentValue = removeFormatting(getOutput()).toString();
-			console.log(currentValue);
 			if(currentValue){//if currentValue != null
 				calculation = currentValue + "*";
-				console.log("mult :"+calculation);
 				printHistory(calculation);
 				updateDisplay("");
 			}
 		}
 		if (this.id=="divi") {
 			currentValue = removeFormatting(getOutput()).toString();
-			console.log(currentValue);
 			if(currentValue){//if currentValue != null
 				calculation = currentValue + "/";
-				console.log("divi :"+calculation);
 				printHistory(calculation);
 				updateDisplay("");
 			}
@@ -121,18 +113,13 @@ for (var i =0; i < operator.length; i++){
 			if(currentValue){//if currentValue != null
 				calculation = currentValue + "+";
 				printHistory(calculation);
-				console.log("addcalc: "+calculation);
-				console.log("addhist: "+getHistory);
 				updateDisplay("");
 			}
 		}
 		if (this.id=="equal") {
 			currentValue = removeFormatting(getOutput()).toString();
-			console.log(currentValue);
 			if(currentValue){//if currentValue != null
 				currentValue = eval(calculation+currentValue);
-				console.log("equal :"+ calculation);
-				console.log("equal :"+calculation);
 				updateDisplay(currentValue);
 				currentValue=0;
 			}
