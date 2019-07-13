@@ -5,14 +5,17 @@
 	<link rel="stylesheet" type="text/css" href="CSS/style.css">
 </head>
 <body>
+	<div >
+		<label id="history" class="output">0</label>
+	</div>
 	<div id="display">
-		<label id="output"></label>
+		<label class="output"></label>
 	</div>
 
 	<div id = buttonLayout class="img_container">	
 		<table>
 			<tr>
-				<td colspan="2" align="left"><button id= clear class="btn">Clear</button></td>
+				<td colspan="2" align="left"><button id= clear class="btn operator">Clear</button></td>
 				<td><button id= back class="btn operator"><img id= backspace src="Icons/backspace.png"></td>
 				<td><button id= add class="btn operator"><img src="Icons/plus.png"></button></td>
 			</tr>
@@ -40,12 +43,8 @@
 				<td></td>
 				<td><button id= equal class="btn operator"><img src="Icons/equalsSquare.png"></button></td>
 			</tr>
-
 		</table>
-
-	
 	</div>
-
 	<script type="text/javascript" src="JavaScript/script.js"></script>
 </body>
 </html>

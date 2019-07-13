@@ -15,7 +15,6 @@ div {
 	margin: 5px;
 }
 
-label {font-size: 40px;}
 
 .img_container {
 	display: flex;
@@ -63,7 +62,9 @@ img:hover {transform: scale(1.5);}
 }
 
 
-#output {
+
+
+.output {
 	overflow: hidden;
 	display: inline-block;
 	default: "0";
@@ -75,7 +76,15 @@ img:hover {transform: scale(1.5);}
 	color: white;
 	width: 352px;
 	text-align: right;
-	font-size: 32px;
+	font-size: 35px;
 	font-family: 'Share Tech Mono', monospace;
 }
 
+#history {
+	margin: 0 auto;
+	color: black;
+	width: 352px;
+	text-align: right;
+	font-size: 25px;
+	font-family: 'Share Tech Mono', monospace;
+}
