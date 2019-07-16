@@ -13,7 +13,6 @@ var clearBtn = document.getElementById("clear");
 var backBtn = document.getElementById("back");
 var equalBtn = document.getElementById("equal");
 var display = document.getElementById("display");
-var history = document.getElementById("histry"); 
 
 var numbers = document.getElementsByClassName("number");
 var operator = document.getElementsByClassName("operator");
@@ -39,15 +38,6 @@ function removeFormatting(num){
 
 function getOutput(){
 	return display.innerText;
-}
-
-function getHistory(){
-	return history.innerText;
-}
-function printHistory(num){
-	formattedNumber = formatNumber(num);
-	history.innerText = formattedNumber;
-	return formattedNumber;
 }
 
 function updateDisplay (num) {
@@ -87,7 +77,6 @@ for (var i =0; i < operator.length; i++){
 			console.log(currentValue);
 			if(currentValue){//if currentValue != null
 				calculation = currentValue + "-";
-				printHistory(calculation);
 				updateDisplay("");
 			}
 		}
@@ -95,7 +84,6 @@ for (var i =0; i < operator.length; i++){
 			currentValue = removeFormatting(getOutput()).toString();
 			if(currentValue){//if currentValue != null
 				calculation = currentValue + "*";
-				printHistory(calculation);
 				updateDisplay("");
 			}
 		}
@@ -103,7 +91,6 @@ for (var i =0; i < operator.length; i++){
 			currentValue = removeFormatting(getOutput()).toString();
 			if(currentValue){//if currentValue != null
 				calculation = currentValue + "/";
-				printHistory(calculation);
 				updateDisplay("");
 			}
 		}
@@ -112,7 +99,6 @@ for (var i =0; i < operator.length; i++){
 			console.log(currentValue);
 			if(currentValue){//if currentValue != null
 				calculation = currentValue + "+";
-				printHistory(calculation);
 				updateDisplay("");
 			}
 		}
