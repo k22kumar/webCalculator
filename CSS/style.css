@@ -12,9 +12,16 @@ div {
 	display: flex;
 	justify-content: center;
 	position: relative;
-	margin: 5px;
+
 }
 
+img {
+	height: 85px;
+	width: 85px;
+	transition: all 0.35s;
+}
+
+img:hover {transform: scale(1.5);}
 
 .img_container {
 	display: flex;
@@ -24,12 +31,16 @@ div {
 
 .btn {
 	background-color: transparent;
-	width: 80px;
-	height: 80px;
+	width: 110px;
+	height: 110px;
 	border: none;
 	border-radius: 50%;
-	transition: all 0.72s;
+	transition: all 0.5s;
 }
+
+.btn:active{background-color: black}
+
+.btn:focus {outline: 0;}
 
 
 .baseColor:hover{background-color: #FFFF6F}
@@ -38,38 +49,6 @@ div {
 .numberMult:hover{background-color: #5284FF}
 .numberDivi:hover{background-color: #5DFF52}
 
-#add:hover{background-color: #FF6363}
-#sub:hover{background-color: #EB81FE}
-#mult:hover{background-color: #5284FF}
-#divi:hover{background-color: #5DFF52}
-
-.btn:active{background-color: black}
-
-.btn:focus {outline: 0;}
-
-img {
-	height: 60px;
-	width: 60px;
-	transition: all 0.35s;
-}
-
-img:hover {transform: scale(1.5);}
-
-#clear {
-	padding: 0px;
-	text-align: center;
-	font-size: 40px;
-	font-family: 'Share Tech Mono', monospace;
-	width: 160px;
-	height: 80px;
-	border: none;
-	border-radius: 18px;
-}
-
-#backspace {
-	height: 72px;
-	width: 72px;
-}
 
 .output {
 	overflow: hidden;
@@ -77,13 +56,211 @@ img:hover {transform: scale(1.5);}
 	default: "0";
 }
 
+
+#add:hover{background-color: #FF6363}
+#sub:hover{background-color: #EB81FE}
+#mult:hover{background-color: #5284FF}
+#divi:hover{background-color: #5DFF52}
+
+
+#clear {
+	padding: 0px;
+	text-align: center;
+	font-size: 50px;
+	font-family: 'Share Tech Mono', monospace;
+	width: 220px;
+	height: 110px;
+	border: none;
+	border-radius: 18px;
+}
+
+#backspace {
+	height: 85px;
+	width: 85px;
+}
+
+#back {
+	height: 90px;
+	width: 90px;
+}
+
 #display {
-	margin: 0 auto;
+	margin: 2% auto;
 	background-color: black;
 	color: white;
-	width: 352px;
+	width: auto;
 	text-align: right;
-	font-size: 35px;
+	font-size: 50px;
 	font-family: 'Share Tech Mono', monospace;
+}
+
+
+@media only screen and (max-width : 768px) {
+
+td {
+	padding: 5px;
+}
+
+body{
+	margin-right: 10px;
+}
+
+img {
+	height: 105px;
+	width: 105px;
+}
+
+#display {
+	font-size: 90px;
+}
+
+.btn {
+	width: 155px;
+	height: 155px;
+}
+
+#backspace {
+	height: 130px;
+	width: 130px;
+}
+
+#back {
+	height: 135px;
+	width: 135px;
+}
+
+#clear {
+	width: 265px;
+	height: 155px;
+}
+
+}
+
+@media only screen and (max-width : 414px) {
+
+
+
+img {
+	height: 60px;
+	width: 60px;
+}
+
+td{
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+#display {
+	font-size: 40px;
+}
+
+.btn {
+	width: 85px;
+	height: 85px;
+}
+
+#backspace {
+	height: 72px;
+	width: 72px;
+}
+
+#back {
+	height: 85px;
+	width: 85px;
+}
+
+
+#clear {
+	font-size: 40px;
+	width: 165px;
+	height: 85px;
+}
+
+}
+
+@media only screen and (max-width : 375px) {
+
+
+body{
+	margin-right: 5px;
+}
+
+img {
+	height: 55px;
+	width: 55px;
+}
+
+td{
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+#display {
+	font-size: 40px;
+}
+
+.btn {
+	width: 80px;
+	height: 80px;
+}
+
+#backspace {
+	height: 67px;
+	width: 67px;
+}
+
+#back {
+	height: 80px;
+	width: 80px;
+}
+
+
+#clear {
+	width: 160px;
+	height: 80px;
+}
+
+}
+
+@media only screen and (max-width : 320px) {
+
+
+
+img {
+	height: 40px;
+	width: 40px;
+}
+
+td{
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+#display {
+	font-size: 30px;
+}
+
+.btn {
+	width: 65px;
+	height: 65px;
+}
+
+#backspace {
+	height: 52px;
+	width: 52px;
+}
+
+#back {
+	height: 65px;
+	width: 65px;
+}
+
+
+#clear {
+	font-size: 40px;
+	width: 145px;
+	height: 65px;
+}
+
 }
 
