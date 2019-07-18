@@ -3,7 +3,7 @@
 </style>
 
 body {
-	display: flex;
+	display: block;
 	justify-content: center;
 	flex-direction: column;
 }
@@ -31,12 +31,17 @@ div {
 	transition: all 0.72s;
 }
 
-.btn:hover{background-color: orange}
 
-#add:hover{background-color: red}
-#sub:hover{background-color: blue}
-#mult:hover{background-color: yellow}
-#divi:hover{background-color: green}
+.baseColor:hover{background-color: #FFFF6F}
+.numberAdd:hover{background-color: #FF6363}
+.numberSub:hover{background-color: #EB81FE}
+.numberMult:hover{background-color: #5284FF}
+.numberDivi:hover{background-color: #5DFF52}
+
+#add:hover{background-color: #FF6363}
+#sub:hover{background-color: #EB81FE}
+#mult:hover{background-color: #5284FF}
+#divi:hover{background-color: #5DFF52}
 
 .btn:active{background-color: black}
 
@@ -66,9 +71,6 @@ img:hover {transform: scale(1.5);}
 	width: 72px;
 }
 
-
-
-
 .output {
 	overflow: hidden;
 	display: inline-block;
@@ -85,11 +87,3 @@ img:hover {transform: scale(1.5);}
 	font-family: 'Share Tech Mono', monospace;
 }
 
-#history {
-	margin: 0 auto;
-	color: black;
-	width: 352px;
-	text-align: right;
-	font-size: 25px;
-	font-family: 'Share Tech Mono', monospace;
-}
