@@ -7,6 +7,11 @@ body {
 	justify-content: center;
 	flex-direction: column;
 }
+footer {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
 
 div {
 	display: flex;
@@ -56,6 +61,15 @@ img:hover {transform: scale(1.5);}
 	default: "0";
 }
 
+.credits {
+	font-size: 15px;
+	font-family: 'Share Tech Mono', monospace;
+	text-align: center;
+}
+
+#goBack {
+	margin-top: 5%;
+}
 
 #add:hover{background-color: #FF6363}
 #sub:hover{background-color: #EB81FE}
@@ -85,7 +99,7 @@ img:hover {transform: scale(1.5);}
 }
 
 #display {
-	margin: 2% auto;
+	margin: 1% auto;
 	background-color: black;
 	color: white;
 	width: auto;
